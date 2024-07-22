@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-
-import 'HomePage.dart';
-import 'RegistroUsuario.dart';
+import 'package:flutter_application_api/src/screens/HomePage.dart';
+import 'package:flutter_application_api/src/screens/paginaRegistro.dart';
 
 void main() {
   runApp(const MercadoLibre());
 }
 
-class MercadoLibre extends StatelessWidget{
+class MercadoLibre extends StatelessWidget {
   const MercadoLibre({super.key});
 
-  Widget build(BuildContext context){
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: RegistroUsuario(),
+      home: PaginadeRegistro(),
       routes: {
-        '/registro':(context)=>RegistroUsuario(),
-        '/inicio':(context)=>HomePage(),
+        '/inicio': (context) => HomePage(),
+        '/registro':(context)=>PaginadeRegistro(),
+
       },
     );
   }
 }
-///////////////
